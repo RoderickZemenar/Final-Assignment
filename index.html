@@ -22,7 +22,7 @@
             tickets: [],
         },
         mounted() {
-            fetch('path/to/traffic_tickets.json')
+            fetch('path/to/tickets1.json')
                 .then(response => response.json())
                 .then(data => this.tickets = data)
                 .catch(error => console.error('Error fetching data:', error));
