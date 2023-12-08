@@ -19,10 +19,9 @@
     new Vue({
         el: '#app',
         data: {
-            tickets: [], // Populate this array with your JSON data
+            tickets: [],
         },
         mounted() {
-            // Fetch data from JSON file
             fetch('path/to/traffic_tickets.json')
                 .then(response => response.json())
                 .then(data => this.tickets = data)
