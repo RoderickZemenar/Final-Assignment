@@ -13,6 +13,23 @@
         <a class="navbar-brand" href="index.html">All Data</a>
         <a class="navbar-brand" href="filtered.html">Filtered Data</a>
     </nav>
-  
+<script src="https://cdn.jsdelivr.net/npm/vue@1"></script>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            tickets: [], // Populate this array with your JSON data
+        },
+        mounted() {
+            // Fetch data from JSON file
+            fetch('path/to/traffic_tickets.json')
+                .then(response => response.json())
+                .then(data => this.tickets = data)
+                .catch(error => console.error('Error fetching data:', error));
+        }
+    });
+</script>
+
 </body>
 </html>
